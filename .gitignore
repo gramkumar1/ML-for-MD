@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset (downloaded automatically on first run)
+data/md17/
+data/*.pt
+
+# Model checkpoints
+checkpoints/
+
+# Simulation outputs
+outputs/
+trajectories/
+
+# Environment
+.env
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
