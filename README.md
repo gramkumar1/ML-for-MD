@@ -13,9 +13,8 @@ Simulation is velocity Verlet integration with a velocity-rescaling thermostat t
 ```bash
 python train.py --epochs 100 --batch_size 32 --rho 0.01
 ```
-Downloads the MD17 ethanol dataset on first run (~25 MB). Saves the best checkpoint to `checkpoints/schnet_best.pt`. Target: force MAE below 0.5 kcal/mol/A.
 
-Key flags:
+Flags:
 - `--epochs` — number of training epochs (default: 100)
 - `--max_samples` — frames to use from MD17 (default: 5000)
 - `--hidden_dim` / `--num_layers` — model size (default: 128, 3)
@@ -28,7 +27,7 @@ Loads the trained checkpoint and runs MD. Writes two files to `outputs/`:
 - `trajectory.xyz` — full trajectory, readable by OVITO, VMD, or ASE
 - `simulation.gif` — animated 3D preview
 
-Key flags:
+Flags:
 - `--steps` — number of MD steps at 0.5 fs each (default: 500)
 - `--temp` — temperature in Kelvin for initial velocity sampling (default: 300)
 - `--thermostat` — rescale velocities every N steps (default: 25; set to 0 for NVE)
